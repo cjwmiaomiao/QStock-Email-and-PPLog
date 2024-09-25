@@ -1,0 +1,95 @@
+﻿
+namespace QStock.DB2.Entities
+{
+    using Serenity;
+    using Serenity.ComponentModel;
+    using Serenity.Data;
+    using Serenity.Data.Mapping;
+    using System;
+    using System.ComponentModel;
+    using System.IO;
+
+    [ConnectionKey("QStock"), Module("DB2"), TableName("[dbo].[OOH]")]
+    [DisplayName("Ooh"), InstanceName("Ooh")]
+    [ReadPermission("Administration:General")]
+    [ModifyPermission("Administration:General")]
+    public sealed class OohRow : Row, IIdRow, INameRow
+    {
+        [DisplayName("Sales Order"), Size(255), QuickSearch]
+        public String SalesOrder
+        {
+            get { return Fields.SalesOrder[this]; }
+            set { Fields.SalesOrder[this] = value; }
+        }
+
+        [DisplayName("Sales Order Item"), Size(255)]
+        public String SalesOrderItem
+        {
+            get { return Fields.SalesOrderItem[this]; }
+            set { Fields.SalesOrderItem[this] = value; }
+        }
+
+        [DisplayName("Material"), Size(255)]
+        public String Material
+        {
+            get { return Fields.Material[this]; }
+            set { Fields.Material[this] = value; }
+        }
+
+        [DisplayName("Material Description"), Size(255)]
+        public String MaterialDescription
+        {
+            get { return Fields.MaterialDescription[this]; }
+            set { Fields.MaterialDescription[this] = value; }
+        }
+
+        [DisplayName("Item Category"), Size(255)]
+        public String ItemCategory
+        {
+            get { return Fields.ItemCategory[this]; }
+            set { Fields.ItemCategory[this] = value; }
+        }
+
+        [DisplayName("Sales Employee"), Size(255)]
+        public String SalesEmployee
+        {
+            get { return Fields.SalesEmployee[this]; }
+            set { Fields.SalesEmployee[this] = value; }
+        }
+
+        [DisplayName("Sales Employeename"), Size(255)]
+        public String SalesEmployeename
+        {
+            get { return Fields.SalesEmployeename[this]; }
+            set { Fields.SalesEmployeename[this] = value; }
+        }
+
+        IIdField IIdRow.IdField
+        {
+            get { return Fields.SalesOrder; }
+        }
+
+        StringField INameRow.NameField
+        {
+            get { return Fields.SalesOrder; }
+        }
+
+        public static readonly RowFields Fields = new RowFields().Init();
+
+        public OohRow()
+            : base(Fields)
+        {
+        }
+
+        public class RowFields : RowFieldsBase
+        {
+            public StringField SalesOrder;
+            public StringField SalesOrderItem;
+            public StringField Material;
+            public StringField MaterialDescription;
+            public StringField ItemCategory;
+            public StringField SalesEmployee;
+            public StringField SalesEmployeename;
+        }
+    }
+}

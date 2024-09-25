@@ -1,0 +1,142 @@
+C:\cjwCode\test\SendEmailTest\QStock\QStock.Web\bin\wkhtmltopdf.exe
+C:\cjwCode\test\SendEmailTest\QStock\QStock.Web\bin\QStock.Web.dll.config
+C:\cjwCode\test\SendEmailTest\QStock\QStock.Web\bin\QStock.Web.dll
+C:\cjwCode\test\SendEmailTest\QStock\QStock.Web\bin\QStock.Web.pdb
+C:\cjwCode\test\SendEmailTest\QStock\QStock.Web\bin\BouncyCastle.Crypto.dll
+C:\cjwCode\test\SendEmailTest\QStock\QStock.Web\bin\CsQuery.dll
+C:\cjwCode\test\SendEmailTest\QStock\QStock.Web\bin\Dapper.dll
+C:\cjwCode\test\SendEmailTest\QStock\QStock.Web\bin\EPPlus.dll
+C:\cjwCode\test\SendEmailTest\QStock\QStock.Web\bin\FluentMigrator.dll
+C:\cjwCode\test\SendEmailTest\QStock\QStock.Web\bin\FluentMigrator.Runner.dll
+C:\cjwCode\test\SendEmailTest\QStock\QStock.Web\bin\MailKit.dll
+C:\cjwCode\test\SendEmailTest\QStock\QStock.Web\bin\Microsoft.Web.Infrastructure.dll
+C:\cjwCode\test\SendEmailTest\QStock\QStock.Web\bin\MimeKit.dll
+C:\cjwCode\test\SendEmailTest\QStock\QStock.Web\bin\Mono.Cecil.dll
+C:\cjwCode\test\SendEmailTest\QStock\QStock.Web\bin\Mono.Cecil.Mdb.dll
+C:\cjwCode\test\SendEmailTest\QStock\QStock.Web\bin\Mono.Cecil.Pdb.dll
+C:\cjwCode\test\SendEmailTest\QStock\QStock.Web\bin\Mono.Cecil.Rocks.dll
+C:\cjwCode\test\SendEmailTest\QStock\QStock.Web\bin\Newtonsoft.Json.dll
+C:\cjwCode\test\SendEmailTest\QStock\QStock.Web\bin\NUglify.dll
+C:\cjwCode\test\SendEmailTest\QStock\QStock.Web\bin\PagedList.dll
+C:\cjwCode\test\SendEmailTest\QStock\QStock.Web\bin\PagedList.Mvc.dll
+C:\cjwCode\test\SendEmailTest\QStock\QStock.Web\bin\Serenity.Core.dll
+C:\cjwCode\test\SendEmailTest\QStock\QStock.Web\bin\Serenity.Data.dll
+C:\cjwCode\test\SendEmailTest\QStock\QStock.Web\bin\Serenity.Data.Entity.dll
+C:\cjwCode\test\SendEmailTest\QStock\QStock.Web\bin\Serenity.Services.dll
+C:\cjwCode\test\SendEmailTest\QStock\QStock.Web\bin\Serenity.Web.dll
+C:\cjwCode\test\SendEmailTest\QStock\QStock.Web\bin\StackExchange.Exceptional.dll
+C:\cjwCode\test\SendEmailTest\QStock\QStock.Web\bin\System.Web.Helpers.dll
+C:\cjwCode\test\SendEmailTest\QStock\QStock.Web\bin\System.Web.Mvc.dll
+C:\cjwCode\test\SendEmailTest\QStock\QStock.Web\bin\System.Web.Razor.dll
+C:\cjwCode\test\SendEmailTest\QStock\QStock.Web\bin\System.Web.WebPages.Deployment.dll
+C:\cjwCode\test\SendEmailTest\QStock\QStock.Web\bin\System.Web.WebPages.dll
+C:\cjwCode\test\SendEmailTest\QStock\QStock.Web\bin\System.Web.WebPages.Razor.dll
+C:\cjwCode\test\SendEmailTest\QStock\QStock.Web\bin\TinyMapper.dll
+C:\cjwCode\test\SendEmailTest\QStock\QStock.Web\bin\CsQuery.xml
+C:\cjwCode\test\SendEmailTest\QStock\QStock.Web\bin\Dapper.xml
+C:\cjwCode\test\SendEmailTest\QStock\QStock.Web\bin\EPPlus.xml
+C:\cjwCode\test\SendEmailTest\QStock\QStock.Web\bin\FluentMigrator.pdb
+C:\cjwCode\test\SendEmailTest\QStock\QStock.Web\bin\FluentMigrator.xml
+C:\cjwCode\test\SendEmailTest\QStock\QStock.Web\bin\FluentMigrator.Runner.pdb
+C:\cjwCode\test\SendEmailTest\QStock\QStock.Web\bin\MailKit.xml
+C:\cjwCode\test\SendEmailTest\QStock\QStock.Web\bin\MimeKit.xml
+C:\cjwCode\test\SendEmailTest\QStock\QStock.Web\bin\Mono.Cecil.Mdb.pdb
+C:\cjwCode\test\SendEmailTest\QStock\QStock.Web\bin\Mono.Cecil.Pdb.pdb
+C:\cjwCode\test\SendEmailTest\QStock\QStock.Web\bin\Mono.Cecil.Rocks.pdb
+C:\cjwCode\test\SendEmailTest\QStock\QStock.Web\bin\Newtonsoft.Json.xml
+C:\cjwCode\test\SendEmailTest\QStock\QStock.Web\bin\NUglify.xml
+C:\cjwCode\test\SendEmailTest\QStock\QStock.Web\bin\PagedList.xml
+C:\cjwCode\test\SendEmailTest\QStock\QStock.Web\bin\PagedList.Mvc.xml
+C:\cjwCode\test\SendEmailTest\QStock\QStock.Web\bin\Serenity.Core.pdb
+C:\cjwCode\test\SendEmailTest\QStock\QStock.Web\bin\Serenity.Core.xml
+C:\cjwCode\test\SendEmailTest\QStock\QStock.Web\bin\Serenity.Data.pdb
+C:\cjwCode\test\SendEmailTest\QStock\QStock.Web\bin\Serenity.Data.xml
+C:\cjwCode\test\SendEmailTest\QStock\QStock.Web\bin\Serenity.Data.Entity.pdb
+C:\cjwCode\test\SendEmailTest\QStock\QStock.Web\bin\Serenity.Services.pdb
+C:\cjwCode\test\SendEmailTest\QStock\QStock.Web\bin\Serenity.Web.pdb
+C:\cjwCode\test\SendEmailTest\QStock\QStock.Web\bin\StackExchange.Exceptional.xml
+C:\cjwCode\test\SendEmailTest\QStock\QStock.Web\bin\System.Web.Helpers.xml
+C:\cjwCode\test\SendEmailTest\QStock\QStock.Web\bin\System.Web.Mvc.xml
+C:\cjwCode\test\SendEmailTest\QStock\QStock.Web\bin\System.Web.Razor.xml
+C:\cjwCode\test\SendEmailTest\QStock\QStock.Web\bin\System.Web.WebPages.xml
+C:\cjwCode\test\SendEmailTest\QStock\QStock.Web\bin\System.Web.WebPages.Deployment.xml
+C:\cjwCode\test\SendEmailTest\QStock\QStock.Web\bin\System.Web.WebPages.Razor.xml
+C:\cjwCode\test\SendEmailTest\QStock\QStock.Web\bin\TinyMapper.xml
+C:\cjwCode\test\SendEmailTest\QStock\QStock.Web\obj\Debug\QStock.Web.csproj.CoreCompileInputs.cache
+C:\cjwCode\test\SendEmailTest\QStock\QStock.Web\obj\Debug\QStock.Web.csproj.CopyComplete
+C:\cjwCode\test\SendEmailTest\QStock\QStock.Web\obj\Debug\QStock.Web.dll
+C:\cjwCode\test\SendEmailTest\QStock\QStock.Web\obj\Debug\QStock.Web.pdb
+C:\cjwCode\test\SendEmailTest\QStock\QStock.Web\bin\Microsoft.Owin.dll
+C:\cjwCode\test\SendEmailTest\QStock\QStock.Web\bin\Owin.dll
+C:\cjwCode\test\SendEmailTest\QStock\QStock.Web\bin\Microsoft.Owin.xml
+C:\Haiyan\01 Code\38 LogTool\SendEmailTest\QStock\QStock.Web\bin\FluentMigrator.dll
+C:\Haiyan\01 Code\38 LogTool\SendEmailTest\QStock\QStock.Web\bin\MimeKit.dll
+C:\Haiyan\01 Code\38 LogTool\SendEmailTest\QStock\QStock.Web\bin\Newtonsoft.Json.dll
+C:\Haiyan\01 Code\38 LogTool\SendEmailTest\QStock\QStock.Web\bin\Serenity.Core.dll
+C:\Haiyan\01 Code\38 LogTool\SendEmailTest\QStock\QStock.Web\bin\Serenity.Data.dll
+C:\Haiyan\01 Code\38 LogTool\SendEmailTest\QStock\QStock.Web\bin\Serenity.Data.Entity.dll
+C:\Haiyan\01 Code\38 LogTool\SendEmailTest\QStock\QStock.Web\bin\Serenity.Services.dll
+C:\Haiyan\01 Code\38 LogTool\SendEmailTest\QStock\QStock.Web\bin\Serenity.Web.dll
+C:\Haiyan\01 Code\38 LogTool\SendEmailTest\QStock\QStock.Web\bin\StackExchange.Exceptional.dll
+C:\Haiyan\01 Code\38 LogTool\SendEmailTest\QStock\QStock.Web\bin\System.Web.Mvc.dll
+C:\Haiyan\01 Code\38 LogTool\SendEmailTest\QStock\QStock.Web\bin\wkhtmltopdf.exe
+C:\Haiyan\01 Code\38 LogTool\SendEmailTest\QStock\QStock.Web\bin\QStock.Web.dll.config
+C:\Haiyan\01 Code\38 LogTool\SendEmailTest\QStock\QStock.Web\bin\QStock.Web.dll
+C:\Haiyan\01 Code\38 LogTool\SendEmailTest\QStock\QStock.Web\bin\QStock.Web.pdb
+C:\Haiyan\01 Code\38 LogTool\SendEmailTest\QStock\QStock.Web\bin\BouncyCastle.Crypto.dll
+C:\Haiyan\01 Code\38 LogTool\SendEmailTest\QStock\QStock.Web\bin\CsQuery.dll
+C:\Haiyan\01 Code\38 LogTool\SendEmailTest\QStock\QStock.Web\bin\Dapper.dll
+C:\Haiyan\01 Code\38 LogTool\SendEmailTest\QStock\QStock.Web\bin\EPPlus.dll
+C:\Haiyan\01 Code\38 LogTool\SendEmailTest\QStock\QStock.Web\bin\FluentMigrator.Runner.dll
+C:\Haiyan\01 Code\38 LogTool\SendEmailTest\QStock\QStock.Web\bin\MailKit.dll
+C:\Haiyan\01 Code\38 LogTool\SendEmailTest\QStock\QStock.Web\bin\Microsoft.Owin.dll
+C:\Haiyan\01 Code\38 LogTool\SendEmailTest\QStock\QStock.Web\bin\Microsoft.Web.Infrastructure.dll
+C:\Haiyan\01 Code\38 LogTool\SendEmailTest\QStock\QStock.Web\bin\Mono.Cecil.dll
+C:\Haiyan\01 Code\38 LogTool\SendEmailTest\QStock\QStock.Web\bin\Mono.Cecil.Mdb.dll
+C:\Haiyan\01 Code\38 LogTool\SendEmailTest\QStock\QStock.Web\bin\Mono.Cecil.Pdb.dll
+C:\Haiyan\01 Code\38 LogTool\SendEmailTest\QStock\QStock.Web\bin\Mono.Cecil.Rocks.dll
+C:\Haiyan\01 Code\38 LogTool\SendEmailTest\QStock\QStock.Web\bin\NUglify.dll
+C:\Haiyan\01 Code\38 LogTool\SendEmailTest\QStock\QStock.Web\bin\Owin.dll
+C:\Haiyan\01 Code\38 LogTool\SendEmailTest\QStock\QStock.Web\bin\PagedList.dll
+C:\Haiyan\01 Code\38 LogTool\SendEmailTest\QStock\QStock.Web\bin\PagedList.Mvc.dll
+C:\Haiyan\01 Code\38 LogTool\SendEmailTest\QStock\QStock.Web\bin\System.Web.Helpers.dll
+C:\Haiyan\01 Code\38 LogTool\SendEmailTest\QStock\QStock.Web\bin\System.Web.Razor.dll
+C:\Haiyan\01 Code\38 LogTool\SendEmailTest\QStock\QStock.Web\bin\System.Web.WebPages.Deployment.dll
+C:\Haiyan\01 Code\38 LogTool\SendEmailTest\QStock\QStock.Web\bin\System.Web.WebPages.dll
+C:\Haiyan\01 Code\38 LogTool\SendEmailTest\QStock\QStock.Web\bin\System.Web.WebPages.Razor.dll
+C:\Haiyan\01 Code\38 LogTool\SendEmailTest\QStock\QStock.Web\bin\TinyMapper.dll
+C:\Haiyan\01 Code\38 LogTool\SendEmailTest\QStock\QStock.Web\bin\CsQuery.xml
+C:\Haiyan\01 Code\38 LogTool\SendEmailTest\QStock\QStock.Web\bin\Dapper.xml
+C:\Haiyan\01 Code\38 LogTool\SendEmailTest\QStock\QStock.Web\bin\EPPlus.xml
+C:\Haiyan\01 Code\38 LogTool\SendEmailTest\QStock\QStock.Web\bin\FluentMigrator.pdb
+C:\Haiyan\01 Code\38 LogTool\SendEmailTest\QStock\QStock.Web\bin\FluentMigrator.xml
+C:\Haiyan\01 Code\38 LogTool\SendEmailTest\QStock\QStock.Web\bin\FluentMigrator.Runner.pdb
+C:\Haiyan\01 Code\38 LogTool\SendEmailTest\QStock\QStock.Web\bin\MailKit.xml
+C:\Haiyan\01 Code\38 LogTool\SendEmailTest\QStock\QStock.Web\bin\Microsoft.Owin.xml
+C:\Haiyan\01 Code\38 LogTool\SendEmailTest\QStock\QStock.Web\bin\MimeKit.xml
+C:\Haiyan\01 Code\38 LogTool\SendEmailTest\QStock\QStock.Web\bin\Mono.Cecil.Mdb.pdb
+C:\Haiyan\01 Code\38 LogTool\SendEmailTest\QStock\QStock.Web\bin\Mono.Cecil.Pdb.pdb
+C:\Haiyan\01 Code\38 LogTool\SendEmailTest\QStock\QStock.Web\bin\Mono.Cecil.Rocks.pdb
+C:\Haiyan\01 Code\38 LogTool\SendEmailTest\QStock\QStock.Web\bin\Newtonsoft.Json.xml
+C:\Haiyan\01 Code\38 LogTool\SendEmailTest\QStock\QStock.Web\bin\NUglify.xml
+C:\Haiyan\01 Code\38 LogTool\SendEmailTest\QStock\QStock.Web\bin\PagedList.xml
+C:\Haiyan\01 Code\38 LogTool\SendEmailTest\QStock\QStock.Web\bin\PagedList.Mvc.xml
+C:\Haiyan\01 Code\38 LogTool\SendEmailTest\QStock\QStock.Web\bin\Serenity.Core.pdb
+C:\Haiyan\01 Code\38 LogTool\SendEmailTest\QStock\QStock.Web\bin\Serenity.Core.xml
+C:\Haiyan\01 Code\38 LogTool\SendEmailTest\QStock\QStock.Web\bin\Serenity.Data.pdb
+C:\Haiyan\01 Code\38 LogTool\SendEmailTest\QStock\QStock.Web\bin\Serenity.Data.xml
+C:\Haiyan\01 Code\38 LogTool\SendEmailTest\QStock\QStock.Web\bin\Serenity.Data.Entity.pdb
+C:\Haiyan\01 Code\38 LogTool\SendEmailTest\QStock\QStock.Web\bin\Serenity.Services.pdb
+C:\Haiyan\01 Code\38 LogTool\SendEmailTest\QStock\QStock.Web\bin\Serenity.Web.pdb
+C:\Haiyan\01 Code\38 LogTool\SendEmailTest\QStock\QStock.Web\bin\StackExchange.Exceptional.xml
+C:\Haiyan\01 Code\38 LogTool\SendEmailTest\QStock\QStock.Web\bin\System.Web.Helpers.xml
+C:\Haiyan\01 Code\38 LogTool\SendEmailTest\QStock\QStock.Web\bin\System.Web.Mvc.xml
+C:\Haiyan\01 Code\38 LogTool\SendEmailTest\QStock\QStock.Web\bin\System.Web.Razor.xml
+C:\Haiyan\01 Code\38 LogTool\SendEmailTest\QStock\QStock.Web\bin\System.Web.WebPages.xml
+C:\Haiyan\01 Code\38 LogTool\SendEmailTest\QStock\QStock.Web\bin\System.Web.WebPages.Deployment.xml
+C:\Haiyan\01 Code\38 LogTool\SendEmailTest\QStock\QStock.Web\bin\System.Web.WebPages.Razor.xml
+C:\Haiyan\01 Code\38 LogTool\SendEmailTest\QStock\QStock.Web\bin\TinyMapper.xml
+C:\Haiyan\01 Code\38 LogTool\SendEmailTest\QStock\QStock.Web\obj\Debug\QStock.Web.csproj.CoreCompileInputs.cache
+C:\Haiyan\01 Code\38 LogTool\SendEmailTest\QStock\QStock.Web\obj\Debug\QStock.Web.csproj.CopyComplete
+C:\Haiyan\01 Code\38 LogTool\SendEmailTest\QStock\QStock.Web\obj\Debug\QStock.Web.dll
+C:\Haiyan\01 Code\38 LogTool\SendEmailTest\QStock\QStock.Web\obj\Debug\QStock.Web.pdb

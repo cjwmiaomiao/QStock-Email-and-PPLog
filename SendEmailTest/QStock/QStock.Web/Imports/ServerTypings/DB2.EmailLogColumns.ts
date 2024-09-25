@@ -1,0 +1,3 @@
+﻿namespace QStock.DB2 {
+}
+

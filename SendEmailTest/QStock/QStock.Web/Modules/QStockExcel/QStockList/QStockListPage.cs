@@ -1,0 +1,17 @@
+﻿
+namespace QStock.QStockExcel.Pages
+{
+    using Serenity;
+    using Serenity.Web;
+    using System.Web.Mvc;
+
+    [RoutePrefix("QStockExcel/QStockList"), Route("{action=index}")]
+    [PageAuthorize(typeof(Entities.QStockListRow))]
+    public class QStockListController : Controller
+    {
+        public ActionResult Index()
+        {
+            return View("~/Modules/QStockExcel/QStockList/QStockListIndex.cshtml");
+        }
+    }
+}

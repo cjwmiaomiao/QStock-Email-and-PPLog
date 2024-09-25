@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Serenity.Pro.Scripts</id>
+    <version>3.9.10</version>
+    <title>Serenity Pro - Scripts</title>
+    <authors>Volkan Ceylan</authors>
+    <owners>Volkan Ceylan</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>https://raw.github.com/volkanceylan/Serenity/master/LICENSE.md</licenseUrl>
+    <projectUrl>http://github.com/volkanceylan/Serenity</projectUrl>
+    <iconUrl>https://raw.github.com/volkanceylan/Serenity/master/Tools/Images/serenity-logo-128.png</iconUrl>
+    <description>Contains scripts for Serenity premium applications</description>
+    <copyright>Copyright (c) Volkan Ceylan</copyright>
+    <language>en-US</language>
+    <tags>Serenity</tags>
+  </metadata>
+</package>

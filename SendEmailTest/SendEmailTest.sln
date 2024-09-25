@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.34729.46
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SendEmailTest", "SendEmailTest\SendEmailTest.csproj", "{EDCCAA7B-1F03-449B-8C42-B0FC35644631}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QStock.Web", "QStock\QStock.Web\QStock.Web.csproj", "{E298DC33-D240-4585-AC47-775575246780}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EDCCAA7B-1F03-449B-8C42-B0FC35644631}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDCCAA7B-1F03-449B-8C42-B0FC35644631}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDCCAA7B-1F03-449B-8C42-B0FC35644631}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDCCAA7B-1F03-449B-8C42-B0FC35644631}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E298DC33-D240-4585-AC47-775575246780}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E298DC33-D240-4585-AC47-775575246780}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E298DC33-D240-4585-AC47-775575246780}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E298DC33-D240-4585-AC47-775575246780}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {53BBC83B-44D9-4C9D-8E98-5459AA9A3CC9}
+	EndGlobalSection
+EndGlobal

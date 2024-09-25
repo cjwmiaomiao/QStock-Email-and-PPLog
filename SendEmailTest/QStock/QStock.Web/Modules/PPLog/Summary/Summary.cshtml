@@ -1,0 +1,396 @@
+﻿<script src="~/Scripts/vue.js"></script>
+<link href="~/Scripts/element-plus/element_ui_index.css" rel="stylesheet" />
+<script src="~/Scripts/element-plus/element_ui_index.js"></script>
+@{
+    ViewData["Title"] = "Summary";
+}
+
+<div class="summary"  id="vue-container">
+    <div class="title-text">
+        Summary Download
+    </div>
+    <div class="toolbar" >
+        <div class="search">
+            <span class="calendar-select">
+                <i class="nav-icon fa fa-calendar"></i>
+            </span>
+            <el-select v-model="monthValue" class="select">
+                <el-option v-for="item in monthOptions"
+                            :key="item.value"
+                            :label="item.label"
+                            :value="item.value">
+                </el-option>
+            </el-select>   
+        </div>
+        <div class="tool-button">
+            <div class="addBtt" @@click="summaryOptionsAdd">
+                <span class="button-inner">
+                    <i class="fa fa-plus-circle text-green"></i>
+                    Add new option
+                </span>
+            </div>
+            <div class="addBtt" @@click="summaryDownloadClick">
+                <span class="button-inner">
+                    <i class="fa fa-file-excel-o text-green"></i>
+                    Download Excel
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="summaryOptions">
+        <el-row class="summaryTitle">
+            <el-col :span="6"><strong>Vendor</strong></el-col>
+            <el-col :span="6"><strong>PDCL</strong></el-col>
+            <el-col :span="6"><strong>Type</strong></el-col>
+        </el-row>
+        <el-row v-for="(item, index) in form.rows" :key="index" style="margin-bottom: 5px; margin-top: 5px;" class="summaryOption">
+            <el-col :span="6">
+                <el-select v-model="item.vendor" placeholder="Vendor">
+                    <el-option v-for="option in vendorOptions"
+                                :key="option"
+                                :label="option"
+                                :value="option">
+                    </el-option>
+                </el-select>
+            </el-col>
+            <el-col :span="6">
+                <el-select v-model="item.pdcl" placeholder="PDCL">
+                    <el-option v-for="option in pdclOptions[item.vendor]"
+                                :key="option"
+                                :label="option"
+                                :value="option">
+                    </el-option>
+                </el-select>
+            </el-col>
+            <el-col :span="6">
+                <el-select v-model="item.type" placeholder="Type">
+                    <el-option v-for="option in filteredTypes[index]"
+                                :key="option"
+                                :label="option"
+                                :value="option">
+                    </el-option>
+                </el-select>
+            </el-col>
+            <el-col :span="3">
+                <el-button @@click="clearRow(index)" type="warning" size="mini">清空</el-button>
+            </el-col>
+            <el-col :span="3">
+                <el-button @@click="removeRow(index)" type="danger" icon="el-icon-delete" size="mini">删除</el-button>
+            </el-col>
+        </el-row>
+    </div>
+</div>
+
+<script>
+    const vm = new Vue({
+        el: "#vue-container",
+        data: {
+            monthOptions: [],
+            monthValue: '',
+            form: {
+                rows: [{ vendor: '', pdcl: '', type: '' }]
+            },
+            vendorOptions: ['3RD', 'AfP', 'AhmP', 'BuP2', 'DCAT', 'DCBR', 'DCCZ', 'DCEM', 'DCFI', 'DCHK', 'DCIN', 'DCIT', 'DCKR', 'DCOC', 'DCUS', 'Didactic', 'EcP', 'FniP', 'GleP', 'HejP', 'HoP2', 'HorP', 'Lohr SVC', 'LoP1', 'MIIP', 'NuP2', 'NuP2 MA SVC', 'PkP', 'PkP SVC', 'TscP', 'VxP', 'WujP', 'WujP SVC'],
+            pdclOptions: {
+                '': ['AST', 'ATJ', 'CHY', 'EDC', 'ERW', 'GEN', 'ICS', 'ICO', 'IPM', 'IHS', 'MAP', 'MCO', 'MEL', 'MHS', 'OEG', 'OGB'],
+                'PkP': ['CHY', 'MAP', 'MCO', 'MEL', 'OGB'],
+                'BuP2': ['MAP'],
+                'EcP': ['MAP'],
+                'HorP': ['MAP', 'MHS'],
+                'TscP': ['MAP', 'ICO', 'MHS'],
+                'WujP': ['ICO', 'ICS', 'IHS'],
+                'AfP': ['CHY', 'ICS', 'IHS', 'MCO', 'MHS'],
+                'AhmP': ['ICO', 'MEL'],
+                'DCAT': ['CHY', 'IPM'],
+                'DCBR': ['MCO', 'OEG'],
+                'GleP': ['ORP'],
+                'HejP': ['OEG'],
+                'FniP': ['HLD', 'MAP', 'MHS'],
+                'Didactic': ['IHS'],
+                'DCEM': ['IHS'],
+                'DCFI': ['CHY', 'IPM'],
+                'DCIN': ['MEL'],
+                'DCIT': ['IPM'],
+                'DCKR': ['IPM'],
+                'DCOC': ['CHY'],
+                'DCUS': ['ICO', 'IHS', 'IPM'],
+                'HoP2': ['ICO', 'IHS', 'MCO', 'MEL', 'MHS'],
+                'Lohr SVC': ['CHY', 'HLD', 'ICO', 'IHS', 'IPM'],
+                'LoP1': ['CHY', 'ICO', 'ICS', 'IHS', 'IPM', 'MCO'],
+                'MllP': ['HLD', 'IPM'],
+                'NuP2': ['IHS', 'MEL', 'OEG', 'OGB'],
+                'NuP2 MA SVC': ['CHY', 'IHS', 'MAP', 'MCO', 'MEL', 'MHS', 'OEG'],
+                'VxP': ['MCO', 'MHS'],
+                'WujP SVC': ['CHY', 'IHS', 'MCO']
+            },
+            typeOptions: {
+                '_': ['//4WRPE', '//DREP', '1-2 TH6', '4 TH6N', '4 TH6NR', '4WRA', '4WREE', '4WRKE', '4WRLE', '4WRZ', '4WRZE', 'A10', 'A10CNO', 'A10FE', 'A10FM', 'A10FZG', 'A10VER', 'A10VM', 'A10VNO', 'A10VO', 'A10VSNO', 'A10VSO', 'A10VWO', 'A10VZG', 'A11', 'A11VLO', 'A11VO', 'A15VSO', 'A17', 'A1VO', 'A2', 'A20', 'A20VO', 'A22', 'A24', 'A28', 'A2FM', 'A2FO', 'A4', 'A41', 'A4CSG', 'A4FO', 'A4VBO', 'A4VSG', 'A4VSO', 'A6', 'A6VE', 'A6VM', 'A7', 'A7VO', 'A8', 'CDV', 'certificate', 'Certificate 2.2', 'Certificate 3.1', 'Certificate CCS', 'CPM', 'EDS', 'EMS', 'GFB (GFB7~GFB110)', 'GFT Big (GFT40~620, GFT8150~8190, GFW5150~5190)', 'GFT Small (GFT7~36, GFT8110~8140, GFW5110~40)', 'HCS03', 'HIC', 'M4, M7, M9', 'M8', 'MHSTE', 'Mini (GFT 7, GFT 9 with integrate Motor）', 'NG10', 'NG10+', 'NG16', 'NG22', 'NG25', 'NG6', 'Opit gear (GFT2000, GFB2000)', 'others', 'PIB', 'PLUG', 'PV', 'RM35', 'RS12', 'SB12', 'SB23', 'SED', 'SEW', 'SRC', 'SX12/14, RS12/15, ROS12', 'VT-HMC', 'VT-TMC', 'Z-VALVE'],
+                '_CHY': ['CDV', 'CPM', 'HIC', 'MHSTE', 'PIB'],
+                '_MAP': ['A10', 'A11', 'A2', 'A22', 'A28', 'A4', 'A6', 'A2', 'A4', 'A10', 'A8', 'A17', 'A7', 'A11', 'A20', 'A6', 'A24', 'A41', 'EMS', 'EDS', 'A10', 'A20', 'A4', 'A7', 'A2', 'A6', 'A1', 'A15', 'A28', 'A11'],
+                '_MCO': ['2TH6', '4TH5N', '4TH6N', 'M4', 'M7', 'M8', 'M9', 'RM35', 'ROS12', 'RS12', 'RS15', 'SB12', 'SB23', 'SB24', 'SX12', 'SX14'],
+                '_MEL': ['RC4', 'SRC', 'RC5'],
+                '_OGB': ['GFB (GFB7~GFB110)', 'GFT Big (GFT40~620, GFT8150~8190, GFW5150~5190)', 'GFT Small (GFT7~36, GFT8110~8140, GFW5110~40)', 'Mini (GFT 7, GFT 9 with integrate Motor）', 'Opit gear (GFT2000, GFB2000)', 'TU-Fin gds samples'],
+                '_MHS': ['certificate'],
+                '_ICO': ['SEW', 'SED', 'NG16', '4WRZ', 'NG25', 'PV', 'NG22', 'NG10+', 'NG6', '4WRZE', '4WRKE', '4WRA', 'DREP', '4WRLE', 'NG10', 'VT-HMC', '4WREE', 'PLUG', 'SVP'],
+                'PkP_': ['CDV', 'CPM', 'HIC', 'MHSTE', 'PIB', 'A10', 'A11', 'A2', 'A22', 'A28', 'A4', 'A6', '2TH6', '4TH5N', '4TH6N', 'M4', 'M7', 'M8', 'M9', 'RM35', 'ROS12', 'RS12', 'RS15', 'SB12', 'SB23', 'SB24', 'SX12', 'SX14', 'RC4', 'SRC', 'GFB (GFB7~GFB110)', 'GFT Big (GFT40~620, GFT8150~8190, GFW5150~5190)', 'GFT Small (GFT7~36, GFT8110~8140, GFW5110~40)', 'Mini (GFT 7, GFT 9 with integrate Motor）', 'Opit gear (GFT2000, GFB2000)', 'others'],
+                'BuP2_': ['A6', 'A2', 'A4'],
+                'EcP_': ['A2', 'A4', 'A10', 'A8', 'A17', 'A7', 'A11', 'A20', 'A6', 'A24', 'A41', 'EMS', 'EDS'],
+                'HorP_': ['A10', 'A20', 'A4', 'A7', 'A2', 'A6', 'A1', 'A15', 'A28', 'A11', 'certificate'],
+                'TscP_': ['A6', 'A4', 'A2', 'A10'],
+                'WujP_': ['SEW', 'SED', 'NG16', '4WRZ', 'NG25', 'PV', 'NG22', 'NG10+', 'NG6', '4WRZE', '4WRKE', '4WRA', 'DREP', '4WRLE', 'NG10', 'VT-HMC', '4WREE', 'PLUG', 'SVP'],
+                'PkP_CHY': ['CDV', 'CPM', 'HIC', 'MHSTE', 'PIB'],
+                'PkP_MAP': ['A10', 'A11', 'A2', 'A22', 'A28', 'A4', 'A6'],
+                'PkP_MCO': ['2TH6', '4TH5N', '4TH6N', 'M4', 'M7', 'M8', 'M9', 'RM35', 'ROS12', 'RS12', 'RS15', 'SB12', 'SB23', 'SB24', 'SX12', 'SX14'],
+                'PkP_MEL': ['RC4', 'SRC', 'RC5'],
+                'PkP_OGB': ['GFB (GFB7~GFB110)', 'GFT Big (GFT40~620, GFT8150~8190, GFW5150~5190)', 'GFT Small (GFT7~36, GFT8110~8140, GFW5110~40)', 'Mini (GFT 7, GFT 9 with integrate Motor）', 'Opit gear (GFT2000, GFB2000)', 'TU-Fin gds samples'],
+                'BuP2_MAP': ['A6', 'A2', 'A4'],
+                'EcP_MAP': ['A2', 'A4', 'A10', 'A8', 'A17', 'A7', 'A11', 'A20', 'A6', 'A24', 'A41', 'EMS', 'EDS'],
+                'HorP_MAP': ['A10', 'A20', 'A4', 'A7', 'A2', 'A6', 'A1', 'A15', 'A28', 'A11'],
+                'HorP_MHS': ['certificate'],
+                'TscP_MAP': ['A6', 'A4', 'A2', 'A10'],
+                'WujP_ICO': ['SEW', 'SED', 'NG16', '4WRZ', 'NG25', 'PV', 'NG22', 'NG10+', 'NG6', '4WRZE', '4WRKE', '4WRA', 'DREP', '4WRLE', 'NG10', 'VT-HMC', '4WREE', 'PLUG', 'SVP']
+            },
+        },
+        computed: {
+            filteredTypes() {
+                return this.form.rows.map(row => {
+                    const key = `${row.vendor}_${row.pdcl}`;
+                    return key in this.typeOptions ? this.typeOptions[key] : [];
+                })
+            }
+        },
+        created() {
+            this.getMonthOptions();
+        },
+        methods: {
+            getMonthOptions() {
+                let currentDate = new Date();
+                const options = [];
+
+                for (let i = 0; i <= 5; i++) {
+                    let year = currentDate.getFullYear();
+                    let month = currentDate.getMonth() - i;
+                    if (month < 0) {
+                        year--;
+                        month += 12;
+                    }
+                    let formattedMonth = year + "-" + (month < 9 ? "0" + (month + 1) : (month + 1));
+                    options.push({
+                        value: formattedMonth,
+                        label: formattedMonth
+                    });
+                }
+                this.monthOptions = options;
+                this.monthValue = this.monthOptions[0]?.value;
+            },
+            clearRow(index) {
+                this.$set(this.form.rows, index, { vendor: '', pdcl: '', type: '' });
+            },
+            removeRow(index) {
+                this.form.rows.splice(index, 1);
+            },
+            summaryDownloadClick() {
+                let vendors=[],pdcls=[],types=[]
+                if (this.form.rows.length === 0) {
+                    Q.notifyError("Please add selection!")
+                } else {
+                    this.form.rows.forEach((item) => {
+                        vendors.push(item.vendor);
+                        pdcls.push(item.pdcl);
+                        types.push(item.type)
+                    })
+                Q.postToService({
+                    service: 'PPLog/Summary/ListExcel',
+                    request: {
+                        YearMonth: this.monthValue,
+                        Vendor: vendors,
+                        PDCL: pdcls,
+                        Type: types
+                    },
+                    target: '_blank'
+                });
+                }
+
+                //$.ajax({
+                //    url: Q.resolveUrl('~/Services/PPLog/Summary/ListExcel'),
+                //    type: "post",
+                //    contentType: "application/json; charset=utf-8",
+                //    data: JSON.stringify({
+                //        YearMonth: this.monthValue,
+                //        Vendor: this.form.rows[0].vendor,
+                //        PDCL: this.form.rows[0].pdcl,
+                //        Type: this.form.rows[0].type
+                //    }),
+                //    /*dataType: "json",*/
+                //    responseType: "blob",
+                //    timeout: 30000,
+                //    success: function (response, status, xhr) {
+                //        // 获取文件名（从响应头中提取）
+                //        const disposition = xhr.getResponseHeader('Content-Disposition');
+                //        const filename = disposition ? disposition.match(/filename="(.+)"/)[1] : 'download.xlsx';
+
+                //        // 创建 Blob 对象
+                //        const blob = new Blob([response], { type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" });
+
+                //        console.log("response:", response.data)
+
+                //        // 创建下载链接并触发下载
+                //        const link = document.createElement('a');
+                //        link.href = window.URL.createObjectURL(blob);
+                //        link.download = filename; // 设置下载的文件名
+                //        document.body.appendChild(link); // 将链接添加到文档中
+                //        link.click(); // 触发下载
+                //        document.body.removeChild(link); // 下载后移除链接
+
+                //        // 释放 URL 对象
+                //        window.URL.revokeObjectURL(link.href);
+                //    },
+                //    error: function (jqXHR, textStatus, errorThrown) {
+                //        console.log('Error: ' + textStatus + ', ' + errorThrown);
+                //        console.log('Response Text: ' + jqXHR.responseText);
+                //    },
+                //    complete: function () {
+                //        console.log('done');
+                //    }
+                //});
+            },
+            summaryOptionsAdd() {
+                this.form.rows.push({
+                    vendor: '', 
+                    pdcl: '',  
+                    type: ''
+                });
+            }
+        }
+    })
+</script>
+
+
+<style lang="scss" scoped>
+    //输入框全局修改
+    .el-input__inner {
+        height: 30px !important;
+        line-height: 30px !important;
+    }
+
+    .el-input__icon {
+        height: 44px;
+        position: relative;
+        top: -7px;
+    }
+    .content {
+        box-sizing: border-box;
+        padding: 25px 15px 15px 20px;
+    }
+
+    .summary {
+        height: 817px;
+        border-top: 1px solid #f0f0f0;
+        background: #fff;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+        padding: 10px;
+        font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    }
+
+    .title-text {
+        font-size: 17px;
+        font-weight: 600;
+        color: #1f7fce;
+        margin-bottom: 8px;
+    }
+    .toolbar {
+        display: flex;
+
+        .search {
+            margin: 2px 5px 5px 0;
+
+            .calendar-select {
+                display: inline-block;
+                background: #1f7fce;
+                padding-top: 3px;
+                padding-left: 11px;
+                height: 30px;
+                width: 36px;
+                border-radius: 4px 0 0 4px;
+
+                i {
+                    color: #eee;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 25px;
+                }
+            }
+
+            .select {
+                margin-left: -3px;
+                width: 162px;
+            }
+
+            .el-input__inner {
+                height: 30px !important;
+                line-height: 30px !important;
+            }
+
+            .el-input__icon {
+                height: 44px;
+                position: relative;
+                top: -7px;
+            }
+        }
+
+        .tool-button {
+            display: flex;
+            height: 30px;
+            font-size: 13px;
+            background: #fff;
+            border: none;
+
+            .addBtt {
+                padding: 5px 7px;
+                border: 1px solid #ddd;
+                border-radius: 3px;
+                overflow: hidden;
+                margin-right: 5px;
+                margin-top: 2px;
+            }
+        }
+    }
+
+    .summaryOptions {
+        /*display: flex;
+        flex-wrap: wrap;*/
+        margin-top: 10px;
+        padding-left: 10px;
+        padding-bottom: 10px;
+        background-color: #f9f9f9;
+        .summaryTitle{
+        display:block;
+        }
+
+        .el-select {
+            width: 162px;
+        }
+
+        .el-input__inner {
+            height: 30px !important;
+            line-height: 30px !important;
+        }
+
+        .el-input__icon {
+            height: 44px;
+            position: relative;
+            top: -7px;
+        }
+
+        .el-col.el-col-6 {
+            color: #1f7fce !important;
+        }
+
+        .summaryOption {
+            background-color: #f9f9f9;
+            margin-bottom:20px !important;
+        }
+    }
+
+</style>
+

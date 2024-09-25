@@ -1,0 +1,9 @@
+C:\cjwCode\test\SendEmailTest\SendEmailTest\bin\Debug\SendEmailTest.exe.config
+C:\cjwCode\test\SendEmailTest\SendEmailTest\bin\Debug\SendEmailTest.exe
+C:\cjwCode\test\SendEmailTest\SendEmailTest\bin\Debug\SendEmailTest.pdb
+C:\cjwCode\test\SendEmailTest\SendEmailTest\obj\Debug\SendEmailTest.csproj.AssemblyReference.cache
+C:\cjwCode\test\SendEmailTest\SendEmailTest\obj\Debug\SendEmailTest.csproj.CoreCompileInputs.cache
+C:\cjwCode\test\SendEmailTest\SendEmailTest\obj\Debug\SendEmailTest.exe
+C:\cjwCode\test\SendEmailTest\SendEmailTest\obj\Debug\SendEmailTest.pdb
+C:\cjwCode\test\SendEmailTest\SendEmailTest\obj\Debug\SendEmailTest.Properties.Resources.resources
+C:\cjwCode\test\SendEmailTest\SendEmailTest\obj\Debug\SendEmailTest.csproj.GenerateResource.cache

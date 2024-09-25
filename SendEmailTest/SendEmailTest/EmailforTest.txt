@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title>[Subject]</title>
+    <style>
+        body {
+            color: #5f7d95;
+            font-family: "Proxima Nova","Helvetica Neue","Helvetica","Roboto","Arial",sans-serif;
+            font-feature-settings: "kern", "liga", "pnum";
+            font-size: 1em;
+            -webkit-font-smoothing: antialiased;
+            line-height: 1.5;
+        }
+
+        table {
+            table-layout: fixed;
+            width: 1000px;
+        }
+
+        th {
+            width: 300px;
+            background-color: #466482;
+            color: white;
+            padding: 6px
+        }
+
+        td {
+            width: 700px;
+            background-color: #EAEAEA;
+            color: black;
+            padding: 6px;
+            word-wrap: break-word;
+            word-break: break-all;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            line-height: 1.2;
+            margin: 0 0 .75em;
+            font-weight: 500;
+            color: #1D262D;
+        }
+
+        p {
+            margin: 0 0 .75em;
+        }
+
+        a {
+            color: #3c8dbc;
+        }
+
+            a:hover,
+            a:active,
+            a:focus {
+                outline: none;
+                text-decoration: none;
+                color: #72afd2;
+            }
+    </style>
+</head>
+<body>
+    <h4>Dear [DisplayName],</h4>
+    <br />
+    [Table]
+    <br />
+    <h4>Best regards, </h4>
+    <h4>CIP Development Team</h4>
+    <p>Please do not reply to this automatically generated email.</p>
+    <p>本邮件自动发送，请不要回复本邮件！</p>
+</body>
+</html>

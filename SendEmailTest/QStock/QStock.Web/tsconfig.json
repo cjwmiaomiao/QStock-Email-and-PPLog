@@ -1,0 +1,28 @@
+﻿{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "preserveConstEnums": true,
+    "experimentalDecorators": true,
+    "declaration": true,
+    "emitBOM": true,
+    "jsx": "react",
+    "noEmitHelpers": true,
+    "outFile": "Scripts/site/QStock.Web.js",
+    "sourceMap": true,
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "target": "es5",
+    "typeRoots": [
+      "./node_modules/@types/"
+    ]
+  },
+  "include": [
+    "./Scripts/typings/serenity/Serenity.CoreLib.d.ts",
+    "./Scripts/typings/jspdf/jspdf.autotable.d.ts",
+    "./Scripts/serenity/Serenity.Pro.UI.d.ts",
+    "./Scripts/serenity/Serenity.Pro.App.d.ts",
+    "./Scripts/serenity/Serenity.Pro.EmailClient.d.ts",
+    "./Imports/**/*",
+    "./Modules/**/*"
+  ]
+}

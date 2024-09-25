@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["Title"] = Serenity.LocalText.Get("Db.QStockExcel.SalesEmailMap.EntityPlural");
+}
+
+<div class="alert alert-info alert-dismissable">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+    <p>
+        Send Email会给所有销售发送邮件，同时所有发送的邮件会抄送给LOG1的Monica Zhao,Han Lin,Xu LiJuan
+    </p>
+</div>
+
+<div id="GridDiv"></div>
+
+<script type="text/javascript">
+    jQuery(function () {
+        new QStock.QStockExcel.SalesEmailMapGrid($('#GridDiv'), {}).init();
+
+        Q.initFullHeightGridPage($('#GridDiv'));
+    });
+</script>
